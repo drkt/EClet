@@ -7,17 +7,18 @@ EClet
        src="https://scan.coverity.com/projects/4781/badge.svg"/>
 </a>
 
-Driver for the Cryptotronix EClet containing an Atmel ATECC108
+Extendfed driver for the Cryptotronix EClet containing an Atmel ATECC608A
 
 Status
 ---
+This is an adoption of the code base originally written for Atmel's ATECC108 to use the extended functionality of the ATECC508A and the ATECC608A.
 
 This software is in ***BETA***. I have tested the below commands, but some there are some features and documentation that I would like to finish. If you use this software, it will configure your ECC108 in a non-reversible way. It will allow you to sign and verify with P256 keys but future features may be incompatible.
 
 Releases
 -----
 
-You can download the latest release [here](https://github.com/cryptotronix/EClet/releases/download/0.1.1/eclet-0.1.1.tar.gz). You will also need [this](https://github.com/cryptotronix/libcrypti2c/releases/download/v0.2/libcryptoauth-0.2.tar.gz) release of libcryptoauth.
+You can download the original release [here](https://github.com/cryptotronix/EClet/releases/download/0.1.1/eclet-0.1.1.tar.gz). You will also need [this](https://github.com/cryptotronix/libcrypti2c/releases/download/v0.2/libcryptoauth-0.2.tar.gz) release of libcryptoauth.
 
 Building
 ----
@@ -26,7 +27,18 @@ Install build-essential, autotools-dev, automake, autoconf, libtool, libxml2-dev
 
 Run `./autogen.sh`. This will generate the required README file from README.md as well as installing the required ***BETA*** version of [libcryptoauth-0.2](https://github.com/cryptotronix/libcrypti2c) (`sudo` is used to install this library)
 
-You can run `eclet` locally, or install it to the system by running `sudo make install`
+You can run `eclet` locally, or install it to the system by running `sudo make install` 
+
+In case this library is used on Raspberry Pi boards I2C functionality has to be activated first.
+
+The I2C bus allows multiple devices to be connected to your Raspberry Pi, each with a unique address, that can often be set by changing jumper settings on the module. It is very useful to be able to see which devices are connected to your Pi as a way of making sure everything is working.
+
+Run the following commands in the Terminal to install the i2c-tools utility.
+
+```
+1. sudo apt-get install -y python-smbus
+2. sudo apt-get install -y i2c-tools
+```
 
 Hardware
 ---
