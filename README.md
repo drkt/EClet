@@ -50,15 +50,15 @@ Go to Interfacing Options
 then I2C
 
 <img alt="Raspberry Kernel Interface Options"
-       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.24.24.png?raw=true"/>
+       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.24.50.png?raw=true"/>
 
 Enable!
 
 <img alt="Raspberry Kernel Interface Options"
-       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.24.24.png?raw=true"/>
+       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.25.14.png?raw=true"/>
        
 <img alt="Raspberry Kernel Interface Options"
-       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.24.24.png?raw=true"/>
+       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.25.22.png?raw=true"/>
 
 Then reboot!
 
