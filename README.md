@@ -44,15 +44,21 @@ Run sudo raspi-config and follow the prompts to install i2c support for the ARM 
 
 Go to Interfacing Options
 
-Image to be inserted
+<img alt="Raspberry Kernel Interface Options"
+       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.24.24.png?raw=true"/>
 
 then I2C
 
-Image to be inserted
+<img alt="Raspberry Kernel Interface Options"
+       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.24.24.png?raw=true"/>
 
 Enable!
 
-Image to be inserted
+<img alt="Raspberry Kernel Interface Options"
+       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.24.24.png?raw=true"/>
+       
+<img alt="Raspberry Kernel Interface Options"
+       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.24.24.png?raw=true"/>
 
 Then reboot!
 
