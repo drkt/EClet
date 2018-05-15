@@ -40,6 +40,44 @@ Run the following commands in the Terminal to install the i2c-tools utility.
 2. sudo apt-get install -y i2c-tools
 ```
 
+Run sudo raspi-config and follow the prompts to install i2c support for the ARM core and linux kernel
+
+Go to Interfacing Options
+
+Image to be inserted
+
+then I2C
+
+Image to be inserted
+
+Enable!
+
+Image to be inserted
+
+Then reboot!
+
+*We also recommend going through the steps below to manually check everything was added by raspi-config!*
+
+Now when you log in you can type the following command to see all the connected devices
+
+```
+1. i2cdetect 1
+```
+
+In  case this doesn't work ddd the following line to /boot/config.txt
+
+```
+1. dtparam=i2c_arm=on
+```
+
+Add the following line to /etc/modules
+
+```
+1. i2c-dev
+```
+
+Reboot
+
 Hardware
 ---
 
