@@ -1,4 +1,4 @@
-EClet
+EClet by Riddle&Code
 =====
 
 [![Build Status](https://travis-ci.org/cryptotronix/EClet.png)](https://travis-ci.org/cryptotronix/EClet)
@@ -7,7 +7,7 @@ EClet
        src="https://scan.coverity.com/projects/4781/badge.svg"/>
 </a>
 
-Extendfed driver for the Cryptotronix EClet containing an Atmel ATECC608A
+Extended driver for the Cryptotronix EClet containing an Atmel ATECC608A
 
 Status
 ---
@@ -178,6 +178,7 @@ One can get the public key at any time calling the command get-pub. In case the 
 ```bash
 eclet get-pub -k 0
 04EED1CB629CF87F8BF6419986F990B92EA3DFA14CDAF70EB3E8DA8F9C9504DBC5B040D6480E88F895E9E1D4477970329B060450C80E1816EFED7B0FA49868CAEB
+```
 
 ### sign
 ```bash
