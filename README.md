@@ -49,15 +49,15 @@ Go to Interfacing Options
 
 then I2C
 
-<img alt="Raspberry Kernel Interface Options"
+<img alt="Raspberry Kernel I2C Select"
        src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.24.50.png?raw=true"/>
 
 Enable!
 
-<img alt="Raspberry Kernel Interface Options"
+<img alt="Raspberry Kernel I2C Confirm"
        src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.25.14.png?raw=true"/>
        
-<img alt="Raspberry Kernel Interface Options"
+<img alt="Raspberry Kernel I2C Confirmed"
        src="https://github.com/RiddleAndCode/EClet/blob/master/doc/Screen%20Shot%202018-05-15%20at%2010.25.22.png?raw=true"/>
 
 Then reboot!
@@ -84,8 +84,20 @@ Add the following line to /etc/modules
 
 Reboot
 
+Once I2C is activated mount the secure element onto the Raspberry Pi board according to the image
+
+<img alt="Riddle&Code secure element on Raspberry Pi"
+       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/CryptoBerry.png?raw=true"/>
+
 Hardware
 ---
+
+Riddle&Code built a new hardware secure element based on Atmel's ATECC608A and ATAES132A.
+
+<img alt="Riddle&Code Secure Element"
+       src="https://github.com/RiddleAndCode/EClet/blob/master/doc/IMG_0416.jpg?raw=true"/>
+
+It replaces Josh Datko's original hardware.
 
 The Hardware folder has an example board layout. This software will also work on the [CryptoCape](https://www.sparkfun.com/products/12773).
 
@@ -155,6 +167,17 @@ eclet gen-key
 ```
 
 The device will internally create an P-256 ECC key and return the public key. The format of the public key is 0x04 + X + Y. Specify which slot to create a key (0-7, 9-15) with the `-k` option. Currently running this command multiple times will overwrite the public key, see this [issue](https://github.com/cryptotronix/EClet/issues/1).
+
+### get-pub
+```bash
+eclet get-pub
+04EED1CB629CF87F8BF6419986F990B92EA3DFA14CDAF70EB3E8DA8F9C9504DBC5B040D6480E88F895E9E1D4477970329B060450C80E1816EFED7B0FA49868CAEB
+```
+One can get the public key at any time calling the command get-pub. In case the public key of a specific slot has to be called use the parameter -k.
+
+```bash
+eclet get-pub -k 0
+04EED1CB629CF87F8BF6419986F990B92EA3DFA14CDAF70EB3E8DA8F9C9504DBC5B040D6480E88F895E9E1D4477970329B060450C80E1816EFED7B0FA49868CAEB
 
 ### sign
 ```bash
