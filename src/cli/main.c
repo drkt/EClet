@@ -58,6 +58,8 @@ static char doc[] =
   "gen-key       --  Generates a P256 Private key in the specified key slot\n"
   "                  Returns the Public Key (x,y) with the leading uncompressed\n"
   "                  point format tag (0x04)\n"
+  "get-pub       --  returns the public key. get a public key from a specific\n"
+  "                  slot use 'get-pub -k <slot>' \n"
   "sign          --  Performs an ECDSA signature using the NIST P-256 curve.\n"
   "                  Specify the file to signed with -f, which will be SHA-256\n"
   "                  hashed prior to signing. Specify the key with -k.\n"
